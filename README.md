@@ -2,7 +2,7 @@
 
 Backup massivo de firewalls pfSense.
 
-O script [pf-b4ckup.sh](pf-b4ckup.sh) usa um arquivo de enderecos de firewalls pfSense, e então realiza o backup do arquivo `/cf/conf/config.xml` de configuração do firewall.
+O script [pf-b4ckup.sh](pf-b4ckup.sh) usa um arquivo de endereços de firewalls pfSense, e então realiza o backup do arquivo `/cf/conf/config.xml` de configuração do firewall.
 
 Essa lista chamada [firewall.lst](https://github.com/tr4kthebox/pf-bkp/blob/main/pf-b4ckup.sh#L27) deve conter um endereco de IP ou FQDN por linha.
 
