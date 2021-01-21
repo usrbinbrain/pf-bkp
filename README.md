@@ -1,16 +1,15 @@
-# pf-b4ckup.sh
+# pf_bkp.sh
 
-Backup massivo de firewalls pfSense.
+Backup massivo de firewalls pfSense via SSH.
 
-O script [pf-b4ckup.sh](pf-b4ckup.sh) usa um arquivo de endereços de firewalls pfSense, e então realiza o backup do arquivo `/cf/conf/config.xml` de configuração do firewall.
+Esse script assume que já exista uma chave RSA configurada nos dispositivos remotos.
 
-Essa lista chamada [firewall.lst](https://github.com/tr4kthebox/pf-bkp/blob/main/pf-b4ckup.sh#L27) deve conter um endereco de IP ou FQDN por linha.
+O script [pf_bkp.sh](pf_bkp.sh) requer um arquivo com a lista de firewalls, contendo um IP ou FQDN e porta SSH por linha, conforme o seguinte formato.
 
-O script gera o diretório `fw-backup` que e criado no diretório corrente da execução, todos os backups são salvos nesse diretório, dentro de uma pasta que leva o nome do `ano`, `mês` e `dia` da execução do script.
+> myfirewalladdress.local:mySSHport
 
-Os arquivos de backup são salvos no formato `XML` e recebem o nome do `hostname` configurado do S.O. (FreeBSD) do firewall pf-sense.
+O backup do arquivo de configuração (`/cf/conf/config.xml`) do firewall é salvo na estrutura de diretórios criada na execução do script.
 
-Caso o script seja executado mais de uma vez no mesmo dia, os arquivos de backups antigos serão `substituídos` pelos arquivos de backup gerados na última execução do script.
+> ./fw_backup/bkp_<date>-<hours>/<firewall>/config.xml
 
-O script realiza a própria reciclagem de backups, excluindo backups superiores a 60 dias, que pode ser moficado na linha [47](https://github.com/tr4kthebox/pf-bkp/blob/main/pf-b4ckup.sh#L47).
 ***
