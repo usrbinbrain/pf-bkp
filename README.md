@@ -12,4 +12,7 @@ O backup do arquivo de configuração (`/cf/conf/config.xml`) do firewall é sal
 
 > ./fw_backup/bkp_$date-$hours/$firewall/config.xml
 
+Apenas execute.
+
+> ./pf_bkp.sh lista_pfsense.txt
 ***
