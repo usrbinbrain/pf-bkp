@@ -30,6 +30,6 @@ getxml () {
 [[ -f "$1" ]] &&
 banner &&
 for fw in $(cat $1); do
-
     getxml "$fw"
-done || echo -e "\e[1m * $0 require a firewall list as argument"
+done ||
+echo -e "\e[1m * $0 require a firewall list as argument"
