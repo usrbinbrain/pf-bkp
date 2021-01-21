@@ -10,6 +10,6 @@ O script [pf_bkp.sh](pf_bkp.sh) requer um arquivo com a lista de firewalls, cont
 
 O backup do arquivo de configuração (`/cf/conf/config.xml`) do firewall é salvo na estrutura de diretórios criada na execução do script.
 
-> ./fw_backup/bkp_<date>-<hours>/<firewall>/config.xml
+> ./fw_backup/bkp_<date>-<hours>/<firewallName>/config.xml
 
 ***
