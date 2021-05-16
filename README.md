@@ -7,7 +7,7 @@ Pf_bkp realiza o backup da configuração de múltiplos firewalls pfSense via SS
 Clone a ferramenta com o seguinte comando.
 
 ```bash
-git clone https://github.com/tr4kthebox/pf-bkp.git
+git clone https://github.com/usrbinbrain/pf-bkp.git
 ```
 
 ### _Uso._
